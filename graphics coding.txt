@@ -1,0 +1,149 @@
+from turtle import *
+from random import *
+import turtle 
+import time 
+
+#screen setup
+setup(800, 500)
+title("Loui's Turtle Racing Hub")
+bgcolor("olive")
+speed(0)
+
+#heading 
+penup()
+goto(-175, 205)
+color("whitesmoke")
+write("LOUI'S TURTLE RACING HUB", font=("Arial", 18, "bold", "italic"))
+
+#dirt
+goto(-350,200)
+color("wheat")
+begin_fill()
+for i in range(2):
+	forward(700)
+	right(90)
+	forward(400)
+	right(90)
+end_fill()
+
+#finish line
+gap_size = 20 
+shape("square")
+penup()
+
+#white squares row 1 
+color("white")
+for i in range(10):
+	goto(250, (170 - (i * gap_size * 2)))
+	stamp()
+
+#white squares row 2
+color("white")
+for i in range(10):
+	goto(250 + gap_size, (210 - gap_size) - (i * gap_size * 2))
+	stamp()
+
+#blck squares row 1
+color("black") 
+for i in range(10):
+	goto(250, (190 - (i * gap_size * 2)))
+	stamp()
+
+#blck squares row 2
+color("black") 
+for i in range(10):
+	goto(251 + gap_size, ((190 - gap_size) - (i * gap_size * 2)))
+	stamp()
+
+#TURTLE 1-BLUE
+
+blue_turtle = Turtle()
+blue_turtle.color("powderblue")
+blue_turtle.shape("turtle")
+blue_turtle.shapesize(1.5)
+blue_turtle.penup()
+blue_turtle.goto(-300, 150)
+blue_turtle.pendown()
+
+#TURTLE 2-purple
+
+purple_turtle = Turtle()
+purple_turtle.color("mediumpurple")
+purple_turtle.shape("turtle")
+purple_turtle.shapesize(1.5)
+purple_turtle.penup()
+purple_turtle.goto(-300, 50)
+purple_turtle.pendown()
+
+
+#TURTLE 3-orange
+
+orange_turtle = Turtle()
+orange_turtle.color("orange")
+orange_turtle.shape("turtle")
+orange_turtle.shapesize(1.5)
+orange_turtle.penup()
+orange_turtle.goto(-300, -50)
+orange_turtle.pendown()
+
+
+#TURTLE 4-pink
+
+pink_turtle = Turtle()
+pink_turtle.color("palevioletred")
+pink_turtle.shape("turtle")
+pink_turtle.shapesize(1.5)
+pink_turtle.penup()
+pink_turtle.goto(-300, -150)
+pink_turtle.pendown()
+
+
+time.sleep(1)
+
+#moving turtle 
+while blue_turtle.xcor() <= 240 and purple_turtle.xcor() <=240 and orange_turtle.xcor() <=240 and pink_turtle.xcor() <=240:
+    blue_turtle.forward(randint(1, 10)) #randint is random integer
+    purple_turtle.forward(randint(1, 10)) 
+    orange_turtle.forward(randint(1, 10))
+    pink_turtle.forward(randint(1, 10))
+
+# Celebrate the winner 
+
+# Blue wins
+if blue_turtle.xcor() > purple_turtle.xcor() and blue_turtle.xcor() > orange_turtle.xcor() and blue_turtle.xcor() > pink_turtle.xcor(): 
+    blue_turtle.penup()
+    blue_turtle.goto(0, 0)
+    blue_turtle.write("Blue turtle wins yippee!", align="center", font=("Arial", 16, "bold"))
+    for i in range(72):
+        blue_turtle.right(5)
+        blue_turtle.shapesize(2.5)
+
+# Purple wins
+elif purple_turtle.xcor() > blue_turtle.xcor() and purple_turtle.xcor() > orange_turtle.xcor() and purple_turtle.xcor() > pink_turtle.xcor():
+    purple_turtle.penup()
+    purple_turtle.goto(0, 0)
+    purple_turtle.write("Purple turtle wins yippee!", align="center", font=("Arial", 16, "bold"))
+    for i in range(72):
+        purple_turtle.right(5)
+        purple_turtle.shapesize(2.5)
+
+# Orange wins 
+elif orange_turtle.xcor() > blue_turtle.xcor() and orange_turtle.xcor() > pink_turtle.xcor() and orange_turtle.xcor() > purple_turtle.xcor():
+    orange_turtle.penup()
+    orange_turtle.goto(0, 0)
+    orange_turtle.write("Orange turtle wins yippee!", align="center", font=("Arial", 16, "bold"))
+    for i in range(72):
+        orange_turtle.right(5)
+        orange_turtle.shapesize(2.5)
+
+# Pink wins
+else:
+    pink_turtle.penup()
+    pink_turtle.goto(0, 0)
+    pink_turtle.write("Pink turtle wins yippee!", align="center", font=("Arial", 16, "bold"))
+    for i in range(72):
+        pink_turtle.right(5)
+        pink_turtle.shapesize(2.5)
+
+
+time.sleep(5)
