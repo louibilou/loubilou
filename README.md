@@ -1,5 +1,11 @@
-hi! Im Loui, a 1st year university student majoring in cybersecurity. ur welcomed to look around what i have been working on :)
+# Hi there! 👋
+
+I'm **Loui**, a first-year university student majoring in **Cybersecurity**.  
+You're welcome to look around and explore what I've been working on! 😊
+
+---
+
 <div align="center"> 
-  <p>Visitor count</p>
-  <img src="https://profile-counter.glitch.me/loubilou/count.svg" alt="Visitor's Count" />
+  <p><strong>Visitor Count</strong></p>
+  <img src="https://profile-counter.glitch.me/loubilou/count.svg" alt="Visitor Count" />
 </div>
