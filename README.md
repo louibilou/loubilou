@@ -1,6 +1,6 @@
 # Hi there! 👋
 
-I'm **Loui**, a first-year university student majoring in **Cybersecurity**.  
+I'm **Loui**, an undergraduate university student majoring in **Cybersecurity**.  
 You're welcome to look around and explore what I've been working on! 😊
 
 ---
